@@ -9,63 +9,48 @@
 
 * {
     font-family: "Fredoka", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    outline: none;
-    border: none;
     text-decoration: none;
-    transition: all 0.2s linear;
+    text-align: center;
+    text-transform: capitalize;
+}
+body{
+    margin: 0;
 }
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 6rem;
-    scroll-behavior: smooth;
-}
-
+/*Header*/
 header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--dark-grey);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.7rem 9%;
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-grey);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 9%;
+    z-index: 100;
 }
-
 .logo{
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: bold;
 }
-
 .logo span{
   color: var(--orange);
 }
-
 header a {
     text-transform: none;
 }
-
 header .navbar a {
     text-transform: none;
-    text-decoration: none;
     position: relative;
     color: var(--white);
     text-decoration: none;
-    font-size: 2rem;
-    margin: auto 3rem;
+    font-size: 20px;
+    margin: auto 30px;
 }
-
-
 header .navbar a::before {
     content: '';
     position: absolute;
@@ -78,138 +63,98 @@ header .navbar a::before {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
-  }
-
-header .navbar a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
 }
-
-
+header .navbar a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
 header .user a{
     /* color: var(--orange); */
     background-color: var(--orange);
     border-radius: 10px;
-    padding: 0.75rem 1.5rem;
+    padding: 7.5px 15px;
     /* margin: auto 2rem; */
-    font-size: 1.5rem;
+    font-size: 15px;
     color: var(--white);
     font-weight: bold;
     border : 2px solid transparent;
 }
-
 header .user a:hover{
     background: transparent;
     color: var(--orange);
     border : 2px solid var(--orange);
 }
-
 header .user #login{
-    margin-right: 2rem;
+    margin-right: 20px;
 }
 
 /*Banner Slide*/
-.slide_banner{
-    position: relative;
-    width: 100%;
-    height: 100%;
+.home {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background: #000;
-}
-.slide_banner .nav_btn{
-    transition: 1s;
-}
-.slide_banner .banner{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    transition: 0.5s;
-    z-index: 1;
-}
-.slide_banner input[type="radio"]:checked + .banner{
-    z-index: 10;
-}
-.slide_banner .banner img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.slide_banner .banner .isi_banner{
+    justify-content: center;
+    flex-flow: column;
     position: relative;
+    z-index: 0;
+}
+.home .content {
     text-align: center;
-    max-width: 100%;
-    color: #000;
-    text-transform: capitalize;
-    font-family: "Fredoka", sans-serif;
-    font-size: 48px;
-    color: rgba(24, 24, 24, 0.774);
 }
-.slide_banner input[type="radio"]{
-    position: relative;
-    margin: 5px;
-    margin-bottom: 40px;
-    outline: none;
-    cursor: pointer;
-    z-index: 50;
-}
-.slide_banner .banner .isi_banner .content{
-    text-align: center;
-    text-decoration: none;
-}
-.slide_banner .banner .isi_banner .content h3{
-    font-size: 48px;
+.home .content h3 {
+    font-size: 60px;
     color: rgba(24, 24, 24, 0.774);
     text-transform: uppercase;
-    padding-bottom: 14px;
+    padding-bottom: 17.5px;
 }
-.slide_banner .banner .isi_banner .content h3 span{
-    color: #ffa500;
-    font-size: 65px;
+.home .content h3 span {
+    color: var(--orange);
+    font-size: 80px;
 }
-.slide_banner .banner .isi_banner .content p{
-    font-size: 24px;
-    color:#666;
-    padding:.40px 0;
+.home .content p {
+    font-size: 30px;
+    color: #666;
+    padding: 5px 0;
 }
-.slide_banner .banner .isi_banner .content a{
-    padding: 12px 24px;
-    font-size: 16px;
-    margin-top: 20px;
+.home .content a {
+    padding: 15px 3px;
+    font-size: 20px;
+    margin-top: 25px;
 }
-.slide_banner .banner .isi_banner .content a:hover{
+.home .content a:hover {
     color: rgba(255, 255, 255, 0.658);
 }
-.content_btn{
-    display: inline-block;
-    margin-top: 8px;
-    background: #ffa500;
-    color:#fff;
-    padding:.64px 24px;
-    border:.16px solid #ffa500;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
+.home .bg-home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
 }
-.content_btn:hover{
-    background:rgba(255, 165, 0,.2);
-    color: #ffa500;
+
+/*Heading*/
+.heading {
+    text-align: center;
+    padding: 40px 0;
+}
+.heading span {
+    font-size: 45px;
+    background: rgba(255, 165, 0, 0.2);
+    color: var(--orange);
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-top: 20px;
+}
+.heading .space {
+    background: none;
 }
 
 /*Informasi*/
 .info{
-    height: 750px;
+    height: 900px;
 }
 .logo img{
     width: 25%;
@@ -225,15 +170,11 @@ header .user #login{
 
 /*Why Us*/
 .why_us{
-    height: 600px;
+    height: 700px;
     text-align: center;
-    align-items: center;
     justify-content: center;
     display: flex;
-    background-image: linear-gradient(rgba(240, 255, 125, 0.5), rgba(240, 255, 125, 0.5)), url(../images/frontpage-bg.jpg);
-}
-.why_us h2 strong{
-    color:#515151;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url(../images/frontpage-bg.jpg);
 }
 .why_us table{
     width: 95%;
@@ -251,7 +192,7 @@ header .user #login{
 }
 .why_us table .content td{
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 /*Galeri*/
@@ -259,7 +200,7 @@ header .user #login{
     text-align: center;
     max-width: 80%;
     margin: auto;
-    height: 650px;
+    height: 900px;
 }
 .galeri{
     width: 100%;
@@ -274,30 +215,22 @@ header .user #login{
 
 /*Achievement About Us*/
 .achieve{
-    height: 600px;
+    height: 700px;
     margin: 0;
     padding: 10px;
     position: relative;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(240, 255, 125, 0.5), rgba(240, 255, 125, 0.5)), url(../images/frontpage-bg.jpg);
-}
-.achieve h2{
-    margin: 50px;
-}
-.achieve h2 strong{
-    color: #515151;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url(../images/frontpage-bg.jpg);
 }
 .achieve .achievement{
     position: relative;
-    margin: auto;
     display: flex;
 }
 .achieve .achievement .box{
     position: relative;
-    align-items: center;
     width: 300px;
     height: 300px;
-    background: rgba(51, 51, 51, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     float: left;
     margin-top: 50px;
     margin-left: 65px;
@@ -343,13 +276,10 @@ header .user #login{
 
 /*Testi*/
 .slide_testi{
-    height: 650px;
+    height: 900px;
     text-align: center;
     align-items: center;
     display: flex;
-}
-.slide_testi .testi h2{
-    text-align: center;
 }
 .slide_testi .testi table{
     width: 90%;
@@ -366,22 +296,23 @@ header .user #login{
 /*Last Animation Info*/
 .more_info{
     background-image: url(../images/frontpage-bg.jpg);
-    height: 600px;
+    height: 700px;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f3ff82;
-    background-image: linear-gradient(rgba(240, 255, 125, 0.5), rgba(240, 255, 125, 0.5)), url(../images/frontpage-bg.jpg);
+    background-image: linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url(../images/frontpage-bg.jpg);
     flex-direction: column;
 }
 .more_info h2{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 150px;
+    color: #fff;
 }
 .more_info h2 strong{
-    color:#515151;
+    color:#ffa500;
 }
 .more_info h2 b{
     color:#fff;
@@ -491,22 +422,20 @@ header .user #login{
     }
 }
 
+/*Footer*/
 footer{
-    margin-top: 10rem;
+    margin-top: 100px;
     background-color: var(--dark-grey);
     overflow: hidden;
     padding: 30px 0 30px;
-    font-size: 1.3rem;
+    font-size: 13px;
     color: var(--white);
 }
-
-
 footer .logo{
     text-align: center;
     padding: 0 15px 40px 15px;
-    font-size: 3rem;
+    font-size: 30px;
 }
-
 footer .contact{
     display: flex;
     flex-direction: row;
@@ -516,49 +445,46 @@ footer .contact{
     padding-bottom: 35px;
     margin: 0 9%;
 }
-
 .lokasi{
-    line-height: 1.75rem;
-    letter-spacing: 0.1rem;
+    line-height: 17.5px;
+    letter-spacing: 1px;
 }
 .sub-judul{
     height: 25px;
-    font-size: 1.5rem;
+    font-size: 15px;
 }
-
 .jam-kerja{
-    line-height: 1.75rem;
-    letter-spacing: 0.1rem;
+    line-height: 17.5px;
+    letter-spacing: 1px;
 }
-
+footer .lokasi p{
+    text-align: left;
+}
+footer .jam-kerja p{
+    text-align: left;
+}
 footer .lokasi p a{
     color: var(--orange);
 }
-
 .sosmed .sub-judul{
     text-align: center;
 }
-
 .logo-sosmed{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     list-style-type: none;
 }
-
 .logo-sosmed li a img{
     width: 40px;
 }
-
 .logo-sosmed li{
     padding: 8px;
 }
-
 footer .quick-links{
     color: var(--orange);
     padding: 20px 15px 0 15px;
 }
-
 footer .quick-links ul{
     list-style-type: none;
     display: flex;
@@ -567,7 +493,6 @@ footer .quick-links ul{
     justify-content: center;
     text-align: center;
 }
-
 footer .quick-links ul li{
     padding: 10px 7px 0 7px;
 }
