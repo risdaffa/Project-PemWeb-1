@@ -555,7 +555,6 @@ footer .lokasi p a{
 }
 
 footer .quick-links{
-    color: var(--orange);
     padding: 20px 15px 0 15px;
 }
 
@@ -570,4 +569,8 @@ footer .quick-links ul{
 
 footer .quick-links ul li{
     padding: 10px 7px 0 7px;
+}
+
+footer .quick-links ul li a{
+    color: var(--orange);
 }
