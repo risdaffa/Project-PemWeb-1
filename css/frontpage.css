@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --orange: #ffa500;
+    --dark-grey: #333;
+    --light-grey: #666;
+    --white: #fff;
+}
+
+* {
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--dark-grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 9%;
+  z-index: 100;
+}
+
+.logo{
+  color: var(--white);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.logo span{
+  color: var(--orange);
+}
+
+header a {
+    text-transform: none;
+}
+
+header .navbar a {
+    text-transform: none;
+    text-decoration: none;
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: auto 3rem;
+}
+
+
+header .navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--orange);
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+header .navbar a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+header .user a{
+    /* color: var(--orange); */
+    background-color: var(--orange);
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    /* margin: auto 2rem; */
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: bold;
+    border : 2px solid transparent;
+}
+
+header .user a:hover{
+    background: transparent;
+    color: var(--orange);
+    border : 2px solid var(--orange);
+}
+
+header .user #login{
+    margin-right: 2rem;
+}
+
+/*Banner Slide*/
+.slide_banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #000;
+}
+.slide_banner .nav_btn{
+    transition: 1s;
+}
+.slide_banner .banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+}
+.slide_banner input[type="radio"]:checked + .banner{
+    z-index: 10;
+}
+.slide_banner .banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide_banner .banner .isi_banner{
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    color: #000;
+    text-transform: capitalize;
+    font-family: "Fredoka", sans-serif;
+    font-size: 48px;
+    color: rgba(24, 24, 24, 0.774);
+}
+.slide_banner input[type="radio"]{
+    position: relative;
+    margin: 5px;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+    z-index: 50;
+}
+.slide_banner .banner .isi_banner .content{
+    text-align: center;
+    text-decoration: none;
+}
+.slide_banner .banner .isi_banner .content h3{
+    font-size: 48px;
+    color: rgba(24, 24, 24, 0.774);
+    text-transform: uppercase;
+    padding-bottom: 14px;
+}
+.slide_banner .banner .isi_banner .content h3 span{
+    color: #ffa500;
+    font-size: 65px;
+}
+.slide_banner .banner .isi_banner .content p{
+    font-size: 24px;
+    color:#666;
+    padding:.40px 0;
+}
+.slide_banner .banner .isi_banner .content a{
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.slide_banner .banner .isi_banner .content a:hover{
+    color: rgba(255, 255, 255, 0.658);
+}
+.content_btn{
+    display: inline-block;
+    margin-top: 8px;
+    background: #ffa500;
+    color:#fff;
+    padding:.64px 24px;
+    border:.16px solid #ffa500;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.content_btn:hover{
+    background:rgba(255, 165, 0,.2);
+    color: #ffa500;
+}
+
+/*Informasi*/
+.info{
+    height: 750px;
+}
+.logo img{
+    width: 25%;
+    height: 25%;
+}
+.info .info_desc{
+    margin: auto;
+    width: 50%;
+}
+.info .info_desc tr td{
+    text-align: justify;
+}
+
+/*Why Us*/
+.why_us{
+    height: 600px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: linear-gradient(rgba(240, 255, 125, 0.5), rgba(240, 255, 125, 0.5)), url(../images/frontpage-bg.jpg);
+}
+.why_us h2 strong{
+    color:#515151;
+}
+.why_us table{
+    width: 95%;
+    margin: auto;
+}
+.why_us table tr td{
+    width: 33%;
+}
+.why_us table tr td img{
+    width: 30%;
+    height: 30%;
+}
+.why_us table tr td p{
+    text-align: justify;
+}
+.why_us table .content td{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+/*Galeri*/
+.sampel_produk{
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    height: 650px;
+}
+.galeri{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transition: transform .2s;
+}
+.galeri:hover{
+    transform: scale(1.5);
+    border: 3px solid #ffa500;
+}
+
+/*Achievement About Us*/
+.achieve{
+    height: 600px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(240, 255, 125, 0.5), rgba(240, 255, 125, 0.5)), url(../images/frontpage-bg.jpg);
+}
+.achieve h2{
+    margin: 50px;
+}
+.achieve h2 strong{
+    color: #515151;
+}
+.achieve .achievement{
+    position: relative;
+    margin: auto;
+    display: flex;
+}
+.achieve .achievement .box{
+    position: relative;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background: rgba(51, 51, 51, 0.5);
+    float: left;
+    margin-top: 50px;
+    margin-left: 65px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.achieve .achievement .box:hover{
+    border: 5px solid #515151;
+}
+.achieve .achievement .box .achieve_content{
+    font-family: helvetica;
+    color: #fff;
+}
+.achieve .achievement .box .achieve_content h5{
+    font-size: 50px;
+}
+.achieve .achievement .box .achieve_content .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #ffa500;
+}
+.achieve .achievement .box:hover .overlay{
+    opacity: 1;   
+}
+.achieve .achievement .box .achieve_content .overlay .icon{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*Testi*/
+.slide_testi{
+    height: 650px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.slide_testi .testi h2{
+    text-align: center;
+}
+.slide_testi .testi table{
+    width: 90%;
+    margin: auto;
+}
+.slide_testi .testi table tr td{
+    width: 33%;
+    vertical-align: top;
+}
+.slide_testi .testi table tr td p{
+    text-align: justify;
+}
+
+/*Last Animation Info*/
+.more_info{
+    background-image: url(../images/frontpage-bg.jpg);
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3ff82;
+    background-image: linear-gradient(rgba(240, 255, 125, 0.5), rgba(240, 255, 125, 0.5)), url(../images/frontpage-bg.jpg);
+    flex-direction: column;
+}
+.more_info h2{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.more_info h2 strong{
+    color:#515151;
+}
+.more_info h2 b{
+    color:#fff;
+    background-color: #515151;
+}
+.more_info .btn{
+    margin: auto;
+}
+.more_info .btn .button{
+    width: 100px;
+    height: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Segoe UI';
+    border-radius: 10px;
+    color: #fff;
+    background-color: #ffa500;
+    border: 0;
+    cursor: pointer;
+}
+.more_info .btn .button:hover{
+    color: #ffa500;
+    background-color: #fff;
+    border: 3px solid #ffa500;
+}
+.car{
+    height: 80px;
+    width: 140px;
+    background: #000;
+    border-radius: 5px;
+    position: relative;
+    animation: animate 4s linear infinite;
+}
+.car::before{
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    top: 10px;
+    right: 10px;
+}
+@keyframes animate{
+    25%{
+        transform: translate(100px, 0);
+    }
+    50%{
+        transform: translate(0, 0);
+    }
+    75%{
+        transform: translate(-100px, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+.car .roda{
+    height: 30px;
+    width: 30px;
+    background: #000;
+    border: 3px solid #fff;
+    position: absolute;
+    border-radius: 50px;
+    bottom: -20px;
+}
+.car .depan{
+    position: absolute;
+    margin: 0 100px;
+}
+.car .belakang{
+    position: absolute;
+    margin: 0 10px;
+}
+.cover{
+    position: relative;
+    height: 10px;
+    width: 500px;
+    bottom: -20px;
+    overflow: hidden;
+}
+.cover .jalan{
+    height: 8px;
+    width: 600%;
+    background: #000;
+    position: relative;
+    animation: lampujalan 1s linear infinite;
+}
+.jalan:before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 36px;
+    background: #fff;
+    left: 20%;
+}
+.jalan:after{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 36px;
+    background: #fff;
+    right: 60%;
+}
+@keyframes lampujalan{
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+footer{
+    margin-top: 10rem;
+    background-color: var(--dark-grey);
+    overflow: hidden;
+    padding: 30px 0 30px;
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+
+footer .logo{
+    text-align: center;
+    padding: 0 15px 40px 15px;
+    font-size: 3rem;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 35px;
+    margin: 0 9%;
+}
+
+.lokasi{
+    line-height: 1.75rem;
+    letter-spacing: 0.1rem;
+}
+.sub-judul{
+    height: 25px;
+    font-size: 1.5rem;
+}
+
+.jam-kerja{
+    line-height: 1.75rem;
+    letter-spacing: 0.1rem;
+}
+
+footer .lokasi p a{
+    color: var(--orange);
+}
+
+.sosmed .sub-judul{
+    text-align: center;
+}
+
+.logo-sosmed{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.logo-sosmed li a img{
+    width: 40px;
+}
+
+.logo-sosmed li{
+    padding: 8px;
+}
+
+footer .quick-links{
+    color: var(--orange);
+    padding: 20px 15px 0 15px;
+}
+
+footer .quick-links ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .quick-links ul li{
+    padding: 10px 7px 0 7px;
+}
